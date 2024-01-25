@@ -14,7 +14,7 @@ public class C02_Priority {
     //           ve arama sonucunda urun bulunabildigini test edin
     // 3. Test : ilk urunu tiklayin ve urun isminin case sensitive olmaksizin phone icerdigini test edin
 
-    @Test
+    @Test(priority = 1)
     public void testOtomasyonAnaSayfaTesti(){
 
         Driver.getDriver().get("https://www.testotomasyonu.com");
@@ -22,6 +22,16 @@ public class C02_Priority {
         String actualUrl = Driver.getDriver().getCurrentUrl();
 
         Assert.assertEquals(actualUrl,expectedUrl);
+    }
+
+    @Test(priority = 2)
+    public void aramaTesti(){
+
+    }
+
+    @Test(priority = 3)
+    public void ilkUrunIsmi(){
+
     }
 
 }
