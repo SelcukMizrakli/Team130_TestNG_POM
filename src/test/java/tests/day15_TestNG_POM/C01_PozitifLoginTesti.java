@@ -1,4 +1,4 @@
-package tests.day15_TestNG_Pom;
+package tests.day15_TestNG_POM;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -31,8 +31,6 @@ public class C01_PozitifLoginTesti extends TestBase {
         Assert.assertTrue(logOutButonu.isDisplayed());
 
         ReusableMethods.bekle(2);
-
-
 
     }
 }
