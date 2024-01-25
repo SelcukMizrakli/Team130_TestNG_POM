@@ -14,7 +14,7 @@ public class C04_DependsOnMethods {
     List<WebElement> bulunanUrunElementleriList;
 
     @Test(priority = 1)
-    public void testOtomasyonAnaSayfaTesti(){
+    public void a(){
         //	1. Test : Testotomasyonu ana sayfaya gittiginizi test edin
 
         Driver.getDriver().get("https://www.testotomasyonu.com");
@@ -25,8 +25,8 @@ public class C04_DependsOnMethods {
         Assert.assertEquals(actualUrl,expectedUrl);
     }
 
-    @Test(priority = 2)
-    public void aramaTesti(){
+    @Test(dependsOnMethods = "a")
+    public void b(){
         //	2. Test : search Box’i kullanarak “phone” icin arama yapin \
         //            ve arama sonucunda urun bulunabildigini test edin
 
@@ -40,8 +40,8 @@ public class C04_DependsOnMethods {
 
     }
 
-    @Test(priority = 3)
-    public void ilkUrunIsimTesti(){
+    @Test(dependsOnMethods = "b")
+    public void c(){
         //  3.Test : ilk urunu tiklayin
         //  ve urun isminin case sensitive olmaksizin phone icerdigini test edin
 
