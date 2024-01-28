@@ -16,8 +16,7 @@ public class C03_FacebookNegatifLoginTesti {
         //   cookies cikiyorsa kabul edin
 
         FacebookPage facebookPage = new FacebookPage();
-        facebookPage.cookiesKabulButonu.click();
-        ReusableMethods.bekle(1);
+
         //2- POM’a uygun olarak email, sifre kutularini ve giris yap butonunu locate edin
 
         //3- Faker class’ini kullanarak email ve sifre degerlerini yazdirip, giris butonuna basin
