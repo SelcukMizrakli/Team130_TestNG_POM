@@ -48,4 +48,9 @@ public class TestOtomasyonPage {
     @FindBy(xpath = " //div[@class=' heading-sm mb-4']")
     public WebElement urunSayfasindaUrunIsimElementi;
 
+    @FindBy(xpath = "//strong[text() = 'Email/Password Wrong!']")
+    public WebElement loginHataliPassGiris;
+
+    @FindBy(xpath = "//strong[text()='Customer not found!']")
+    public WebElement loginHataliEmailGiris;
 }
