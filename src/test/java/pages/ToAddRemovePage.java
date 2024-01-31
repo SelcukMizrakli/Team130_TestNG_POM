@@ -7,21 +7,23 @@ import utilities.Driver;
 
 import java.util.List;
 
-public class TestOtomasyonAddRemovePage {
-    public TestOtomasyonAddRemovePage(){
+public class ToAddRemovePage {
+
+    public ToAddRemovePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//*[text()='Add/Remove Elements']")
-    public WebElement addRemoveTextElementi;
+    @FindBy(tagName = "h2")
+    public WebElement addRemoveYaziElementi;
 
     @FindBy(xpath = "//*[text()='Electronics Products']")
-    public WebElement clickForElecktronicsProductsButton;
+    public WebElement electronicsLinki;
 
-    @FindBy(xpath = "//li[@class='current']")
-    public WebElement electronicsText;
+    @FindBy(xpath = "//li[@class = 'current']")
+    public WebElement electronicsSayfasiDogrulama;
 
     @FindBy(xpath = "//*[@*='product-box mb-2 pb-1']")
     public List<WebElement> bulunanUrunElementleriList;
+
 
 }
