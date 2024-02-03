@@ -41,21 +41,13 @@ public class Driver {
         if (driver == null){
 
             switch (browserTercihi){
-
-                case "firefox" :
-                    WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver();
-                    break;
-
                 case "edge" :
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
                     break;
-
-                case "safari" :
-                    WebDriverManager.safaridriver().setup();
-                    driver = new SafariDriver();
-                    break;
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver = new ChromeDriver();
                 default:
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
